@@ -1,0 +1,44 @@
+
+<html>
+<body>
+
+
+
+  <input type="file" id="file" >
+
+
+</body>
+</html>
+
+
+
+<script>
+
+  converter(dataURL);
+
+
+
+  function FileListItem(a) {
+    a = [].slice.call(Array.isArray(a) ? a : arguments)
+    for (var c, b = c = a.length, d = !0; b-- && d;) d = a[b] instanceof File
+      if (!d) throw new TypeError("expected argument to FileList is File or array of File objects")
+        for (b = (new ClipboardEvent("")).clipboardData || new DataTransfer; c--;) b.items.add(a[c])
+          return b.files
+      }
+
+
+
+      function converter(base){
+        const byteString = atob(base.replace('data:image/png;base64,', ''));
+        const ab = new ArrayBuffer(byteString.length);
+        const ia = new Uint8Array(ab);
+        for (let i = 0; i < byteString.length; i += 1) {
+          ia[i] = byteString.charCodeAt(i);
+        }
+        const newfile = new File([ab], "nome-do-arquivo.png", { type: "image/png" });
+        const upload=document.getElementById("file");
+        upload.files = new FileListItem(newfile)
+
+      }
+
+    </script>
