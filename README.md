@@ -48,3 +48,5 @@ upload.files = new FileListItem(newfile)
 * [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 * [charCodeAt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt)
 * [File](https://developer.mozilla.org/en-US/docs/Web/API/File)
+* [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader)
+
