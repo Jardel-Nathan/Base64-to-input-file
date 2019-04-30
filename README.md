@@ -5,7 +5,7 @@ Adicionando um File ao input file HTML
 
 Decodifica uma string base64
 ```
-const byteString = atob(base.replace('data:image/jpeg;base64,', ''));
+const byteString = atob(base64String.replace('data:image/jpeg;base64,', ''));
 ```
 
 Converte o ArrayBuffer para String
