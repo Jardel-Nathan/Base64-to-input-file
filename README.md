@@ -4,7 +4,7 @@ Adicionando um File ao input file HTML
 
 
 Decodifica uma string base64
-```
+```javascript
 const byteString = atob(base64String.replace('data:image/jpeg;base64,', ''));
 ```
 
@@ -19,12 +19,12 @@ ia[i] = byteString.charCodeAt(i);
 
 
 Gera o File 
-```
+```javascript
 const newfile = new File([ab], "nome-do-arquivo.jpg", { type: "image/jpeg" });
 ```
 
 Usado para criar uma nova FileList de maneira circular
-```
+```javascript
  function FileListItem(a) {
 a = [].slice.call(Array.isArray(a) ? a : arguments)
 for (var c, b = c = a.length, d = !0; b-- && d;) d = a[b] instanceof File
@@ -35,7 +35,7 @@ return b.files
 ```
 
 insere o File gerado no input file 
-```
+```javascript
 const upload=document.getElementById("foto_teste");
 upload.files = new FileListItem(newfile)
 ```
