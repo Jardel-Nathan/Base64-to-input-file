@@ -9,7 +9,7 @@ const byteString = atob(base64String.replace('data:image/jpeg;base64,', ''));
 ```
 
 Converte o ArrayBuffer para String
-```
+```javascript
 const ab = new ArrayBuffer(byteString.length);
 const ia = new Uint8Array(ab);
 for (let i = 0; i < byteString.length; i += 1) {
