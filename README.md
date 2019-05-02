@@ -36,8 +36,8 @@ return b.files
 
 insere o File gerado no input file 
 ```javascript
-const upload=document.getElementById("foto_teste");
-upload.files = new FileListItem(newfile)
+const inputFile=document.getElementById("foto_teste");
+inputFile.files = new FileListItem(newfile)
 ```
 
 
